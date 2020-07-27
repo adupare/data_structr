@@ -30,7 +30,23 @@ class LinkList{
     insertNodeAt(data, index){
         if(index > 0 && index > this._length){
             return false
-            
+        }
+        else{
+            var newNode = new ListNode(data);
+            var currentNode, PrevNode;
+            currentNode = this.head;
+            if(index == 0){
+                newNode.next = this.head;
+                this.head = newNode;
+            }
+            else{
+                var i = 0
+                while( i < index){
+                    i++;
+                    prevNode = currentNode;
+                    currentNode = currentNode.next;
+                }
+            }
         }
     }
 }
