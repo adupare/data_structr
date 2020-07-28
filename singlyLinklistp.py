@@ -7,10 +7,10 @@ class Node:
 # making some nodes
 a = Node("monday")
 b = Node("teusday")
-c = Node(30)
-d = Node(40)
-e = Node(50)
-f = Node(60)
+c = Node("wednessday")
+d = Node("thursday")
+e = Node("friday")
+f = Node("saturday")
 # linking these nodes
 a.nextnode = b
 b.nextnode = c
