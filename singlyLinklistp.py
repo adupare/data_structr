@@ -5,8 +5,8 @@ class Node:
         self.nextnode = None
 
 # making some nodes
-a = Node(10)
-b = Node(20)
+a = Node("monday")
+b = Node("teusday")
 c = Node(30)
 d = Node(40)
 e = Node(50)
@@ -42,6 +42,7 @@ l.head.nextnode = b
 l.atstart(5)
 print("your sinlgly linklist")
 l.printlist()
+
 
 
 
