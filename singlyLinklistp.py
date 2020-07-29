@@ -54,17 +54,23 @@ class linklist:
             return count
 
     def insertposition(self, value, index):
-        if( index < 1 or index > l.sizeLinklist):
+        if( index < 1 or index > l.sizeLinklist()):
             print(" the position is out of range")
-        elif( index == 0):
-                self.atstart(self, value)
-        elif( index == l.sizeLinklist):
-                self.atEnd(self, value)
+        elif( index == 1):
+                self.atstart(value)
+        elif( index == l.sizeLinklist()+1):
+                self.atEnd(value)
         else:
             headpointer = self.head
-            count = 0
-            while(headpointer is not None):
-                headpointer = 
+            count = 1
+            while(headpointer is not None and count < index-1):
+                count += 1
+                headpointer = headpointer.nextnode
+            newnode = Node(value)
+            newnode.nextnode = headpointer.nextnode
+            headpointer.nextnode = newnode
+  
+
 
 
 
@@ -82,16 +88,16 @@ l.head = a
 # linking first node
 l.head.nextnode = b
 
-l.atstart("sunday")
-print("your sinlgly linklist new element added at start is: ")
-l.printlist()
-print("\nyour singly linklist new element added at end is: ")
-l.atEnd("superSunday")
+#l.atstart("sunday")
+#print("your sinlgly linklist new element added at start is: ")
+#l.printlist()
+#print("\nyour singly linklist new element added at end is: ")
+#l.atEnd("superSunday")
 l.printlist()
 print("\n the size of the list is: ", l.sizeLinklist())
-#l.insertposition("super wednessday", 3)
-#print("\nyour list after inserting of new element at 4th position ")
-#l.printlist()
+l.insertposition("super wednessday", 6)
+print("\nyour list after inserting of new element at nth position ")
+l.printlist()
 
 
 
