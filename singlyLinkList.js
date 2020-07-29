@@ -50,4 +50,6 @@ class LinkList{
         }
     }
 }
-
+// addNode: will add a node to the link list
+LinkList.addNode(10);
+console.log(LinkList)
